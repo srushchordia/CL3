@@ -1,0 +1,12 @@
+def map_words(text):
+    return text.lower().split()
+
+def reduce_unique(words):
+    return len(set(words)), set(words)
+
+if __name__ == "__main__":
+    text = open("C://Users//INDIA//Downloads//hi.txt").read()
+    words = map_words(text)
+    count, unique = reduce_unique(words)
+    print("Unique Word Count:", count)
+    print("Unique Words:", unique)
